@@ -8,9 +8,10 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>EnergySmartBridge</RootNamespace>
     <AssemblyName>EnergySmartBridge</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -51,7 +52,9 @@
     <Compile Include="CoreServer.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Global.cs" />
+    <Compile Include="Modules\ConnectingFailedHandlerCustom.cs" />
     <Compile Include="Modules\IModule.cs" />
+    <Compile Include="Modules\MqttClientDisconnectedHandlerCustom.cs" />
     <Compile Include="Modules\MQTTModule.cs" />
     <Compile Include="Modules\WebServerModule.cs" />
     <Compile Include="MQTT\BinarySensor.cs" />
