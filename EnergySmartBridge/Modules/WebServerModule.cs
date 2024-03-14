@@ -39,7 +39,7 @@ namespace EnergySmartBridge.Modules
 
         public void Startup()
         {
-            string uri = "http://*:" + Global.webserver_port + "/";
+            string uri = "http://192.168.2.97:" + Global.webserver_port + "/";
 
             try
             { 

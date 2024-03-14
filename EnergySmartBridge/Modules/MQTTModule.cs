@@ -88,10 +88,10 @@ namespace EnergySmartBridge.Modules
                 log.Debug("Publishing controller online");
                 PublishAsync($"{Global.mqtt_prefix}/status", "online");
             });
-            //MqttClient.ConnectingFailedHandler = new ConnectingFailedHandlerDelegate((e) => log.Debug("Error connecting - " + e.Exception.Message));
-            MqttClient.ConnectingFailedHandler = new ConnectingFailedHandlerCustom();
-            //MqttClient.DisconnectedHandler = new MqttClientDisconnectedHandlerDelegate((e) => log.Debug("Disconnected"));
-            MqttClient.DisconnectedHandler = new MqttClientDisconnectedHandlerCustom();
+            MqttClient.ConnectingFailedHandler = new ConnectingFailedHandlerDelegate((e) => log.Debug("Error connecting - " + e.Exception.Message));
+            //MqttClient.ConnectingFailedHandler = new ConnectingFailedHandlerCustom();
+            MqttClient.DisconnectedHandler = new MqttClientDisconnectedHandlerDelegate((e) => log.Debug("Disconnected"));
+            //MqttClient.DisconnectedHandler = new MqttClientDisconnectedHandlerCustom();
 
             MqttClient.StartAsync(manoptions);
 
